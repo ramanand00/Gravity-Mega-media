@@ -23,19 +23,19 @@ const Footer = () => {
               We are a premier media company specializing in creating engaging digital content, shows, and innovative media solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="https://www.facebook.com/profile.php?id=61583210591126" className="text-gray-400 hover:text-white">
                 <FaFacebook size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="https://x.com/Gravity_M_Media" className="text-gray-400 hover:text-white">
                 <FaTwitter size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="https://www.instagram.com/gravitymegamedia" className="text-gray-400 hover:text-white">
                 <FaInstagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="https://www.linkedin.com/in/gravity-megamedia-83a5633a1" className="text-gray-400 hover:text-white">
                 <FaLinkedin size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="https://www.youtube.com/@GravityMegamedia" className="text-gray-400 hover:text-white">
                 <FaYoutube size={20} />
               </a>
             </div>
@@ -127,13 +127,25 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} Gravity Mega Media Pvt. Ltd. This Site is Powered By Riseup-Tech</p>
-          <div className="mt-4 space-x-6">
-            <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-white">Terms of Service</Link>
-            <Link to="/sitemap" className="hover:text-white">Sitemap</Link>
-          </div>
-        </div>
+  <p>
+    &copy; {currentYear} Gravity Mega Media Pvt. Ltd. This Site is Powered By{" "}
+    <a
+      href="https://www.riseup-tech.com.np/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-bold underline text-blue-400 hover:text-blue-300"
+    >
+      Riseup-Tech
+    </a>
+  </p>
+
+  <div className="mt-4 space-x-6">
+    <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
+    <Link to="/terms" className="hover:text-white">Terms of Service</Link>
+    <Link to="/sitemap" className="hover:text-white">Sitemap</Link>
+  </div>
+</div>
+
       </div>
     </footer>
   );
