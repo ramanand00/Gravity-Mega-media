@@ -1,72 +1,72 @@
 import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook } from 'react-icons/fa';
+import dipak from '../assets/team/dipak.jpg';
+import ramanand from '../assets/team/ramanand.jpg';
+import bipana from '../assets/team/bipana.jpeg';
+import laxmi from '../assets/team/laxmi.jpeg';
+import pramila from '../assets/team/pramila.png';
+import sirish from '../assets/team/sirish.jpg';
 
 const Team = () => {
   const departments = [
-    {
-      name: 'Leadership',
-      members: [
-        {
-          name: 'Dipak Chalagain',
-          role: 'CEO & Founder',
-          image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop',
-          bio: 'Visionary leader with 15+ years in media industry',
-          social: { linkedin: '#', twitter: '#', instagram: '#' }
-        },
-        {
-          name: 'Bipana Pant',
-          role: 'Creative Director',
-          image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop',
-          bio: 'Award-winning creative with expertise in visual storytelling',
-          social: { linkedin: '#', twitter: '#', instagram: '#' }
-        }
-      ]
-    },
-    {
-      name: 'Production',
-      members: [
-        {
-          name: 'Ramanand Mandal',
-          role: 'Production Head',
-          image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-          bio: 'Expert in video production and post-processing',
-          social: { linkedin: '#', twitter: '#', instagram: '#' }
-        },
-        {
-          name: 'Neha Singh',
-          role: 'Video Editor',
-          image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop',
-          bio: 'Specialist in motion graphics and visual effects',
-          social: { linkedin: '#', twitter: '#', instagram: '#' }
-        },
-        {
-          name: 'Rohit Verma',
-          role: 'Cinematographer',
-          image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
-          bio: 'Expert in cinematic photography and lighting',
-          social: { linkedin: '#', twitter: '#', instagram: '#' }
-        }
-      ]
-    },
-    {
-      name: 'Technical',
-      members: [
-        {
-          name: 'Sanjay Mehta',
-          role: 'CTO',
-          image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop',
-          bio: 'Tech innovator with expertise in AI and media tech',
-          social: { linkedin: '#', twitter: '#', instagram: '#' }
-        },
-        {
-          name: 'Ananya Desai',
-          role: 'AI Specialist',
-          image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop',
-          bio: 'Leading our AI and machine learning initiatives',
-          social: { linkedin: '#', twitter: '#', instagram: '#' }
-        }
-      ]
-    }
-  ];
+  {
+    name: 'Leadership',
+    members: [
+      {
+        name: 'Dipak Chalagain',
+        role: 'CEO & Founder',
+        image: dipak,
+        bio: 'Visionary leader with 15+ years in media industry',
+        social: { linkedin: '#', twitter: '#', instagram: '#' }
+      }      
+    ]
+  },
+  {
+    name: 'Production',
+    members: [
+      {
+        name: 'Ramanand Mandal',
+        role: 'IT-Engineer | CTO',
+        image: ramanand,
+        bio: 'Expert in video production and post-processing',
+        social: { linkedin: '#', twitter: '#', instagram: '#' }
+      },
+      {
+        name: 'Bipana Panta',
+        role: 'Accounting Manager',
+        image: bipana,
+        bio: 'Specialist in motion graphics and visual effects',
+        social: { linkedin: '#', twitter: '#', instagram: '#' }
+      },
+      {
+        name: 'Laxmi Tamang',
+        role: 'Cinematographer',
+        image: laxmi,
+        bio: 'Expert in cinematic photography and lighting',
+        social: { linkedin: '#', twitter: '#', instagram: '#' }
+      }
+    ]
+  },
+  {
+    name: 'Technical',
+    members: [
+      {
+        name: 'Pramila Raut',
+        role: 'Host',
+        image: pramila,
+        bio: 'Tech innovator with expertise in AI and media tech',
+        social: { linkedin: '#', twitter: '#', instagram: '#' }
+      },
+      {
+        name: 'Sirish Shrestha',
+        role: 'AI Specialist',
+        image: sirish,
+        bio: 'Leading our AI and machine learning initiatives',
+        social: { linkedin: '#', twitter: '#', instagram: '#' }
+      }
+    ]
+  }
+];
+
 
   return (
     <div className="min-h-screen">
