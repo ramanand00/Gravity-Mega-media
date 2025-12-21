@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import EpisodeCard from '../components/EpisodeCard';
 import videos from '../data/videos';
-
 const Episodes = () => {
   const [category, setCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -23,7 +22,7 @@ const Episodes = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-16">
+      <div className="bg-gradient-to-r from-primary-600 to-secondary-600 text-black py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">The GRAVITY SHOW</h1>
           <p className="text-xl opacity-90 max-w-2xl mx-auto">

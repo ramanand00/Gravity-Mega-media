@@ -11,13 +11,7 @@ const Navbar = () => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/services', label: 'Services' },
-    { 
-      label: 'Shows',
-      children: [
-        { path: '/episodes', label: 'The GRAVITY SHOW' },
-        { path: '/episodes?category=AI+Segment', label: 'AI Segment' }
-      ]
-    },
+    { path: '/episodes', label: 'Episodes' },
     { path: '/gallery', label: 'Gallery' },
     { path: '/news', label: 'News & Articles' },
     { path: '/team', label: 'Team' },
