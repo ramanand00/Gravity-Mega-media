@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import EpisodeCard from '../components/EpisodeCard';
 import videos from '../data/videos';
+import SEO from '../components/SEO';
 const Episodes = () => {
   const [category, setCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -21,6 +22,7 @@ const Episodes = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO title="Episodes - Gravity Mega Media" description="Watch the GRAVITY SHOW and other episodes from Gravity Mega Media." path="/episodes" image="/social-image.svg" />
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-primary-600 to-secondary-600 text-black py-16">
         <div className="container mx-auto px-4 text-center">

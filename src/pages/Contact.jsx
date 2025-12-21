@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SEO from '../components/SEO';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
@@ -76,6 +77,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Contact - Gravity Mega Media" description="Get in touch with Gravity Mega Media for collaborations and services." path="/contact" image="/social-image.svg" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">

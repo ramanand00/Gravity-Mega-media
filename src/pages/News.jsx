@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaCalendar, FaUser, FaTag, FaArrowRight, FaSearch } from 'react-icons/fa';
+import SEO from '../components/SEO';
 
 const News = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -100,6 +101,7 @@ const News = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="News & Articles - Gravity Mega Media" description="Latest news, articles, and updates from Gravity Mega Media." path="/news" image="/social-image.svg" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">

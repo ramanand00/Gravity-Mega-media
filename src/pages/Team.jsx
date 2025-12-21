@@ -5,6 +5,7 @@ import bipana from '../assets/team/bipana.jpeg';
 import laxmi from '../assets/team/laxmi.jpeg';
 import pramila from '../assets/team/pramila.png';
 import sirish from '../assets/team/sirish.jpg';
+import SEO from '../components/SEO';
 
 const Team = () => {
   const departments = [
@@ -70,6 +71,7 @@ const Team = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Team - Gravity Mega Media" description="Meet the team behind Gravity Mega Media." path="/team" image="/social-image.svg" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">

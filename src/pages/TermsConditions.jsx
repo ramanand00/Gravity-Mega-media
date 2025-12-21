@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import { FaFileContract, FaShieldAlt, FaUserCheck, FaBalanceScale } from 'react-icons/fa';
 
 const TermsConditions = () => {
@@ -54,6 +55,7 @@ const TermsConditions = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Terms & Conditions - Gravity Mega Media" description="Terms & Conditions for using Gravity Mega Media services." path="/terms-and-conditions" image="/social-image.svg" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">

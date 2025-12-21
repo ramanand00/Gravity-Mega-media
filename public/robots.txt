@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Crawl-delay can be added if you need to slow down bots
+# Crawl-delay: 10
+
+Sitemap: https://example.com/sitemap.xml
+
+# Disallow admin or sensitive routes (uncomment and update if needed)
+# Disallow: /admin
+# Disallow: /server

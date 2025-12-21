@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SEO from '../components/SEO';
 import { FaSearch, FaFilter, FaTimes, FaExpand, FaDownload } from 'react-icons/fa';
 
 const Gallery = () => {
@@ -133,6 +134,7 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Gallery - Gravity Mega Media" description="A visual journey through our work, events, and team moments." path="/gallery" image="/social-image.svg" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">

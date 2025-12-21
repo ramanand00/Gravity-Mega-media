@@ -11,7 +11,7 @@ const Navbar = () => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/services', label: 'Services' },
-    { path: '/episodes', label: 'Episodes' },
+    { path: '/episodes', label: 'Videos' },
     { path: '/gallery', label: 'Gallery' },
     { path: '/news', label: 'News & Articles' },
     { path: '/team', label: 'Team' },
@@ -76,12 +76,7 @@ const Navbar = () => {
               )
             ))}
 
-            <Link
-              to="/admin"
-              className="bg-yellow-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition-colors"
-            >
-              Admin
-            </Link>
+           
           </div>
 
           {/* Mobile menu button */}

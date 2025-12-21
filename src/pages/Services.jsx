@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import { FaVideo, FaBullhorn, FaPaintBrush, FaStream, FaRobot, FaChartLine } from 'react-icons/fa';
 
 const Services = () => {
@@ -42,6 +43,7 @@ const Services = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Services - Gravity Mega Media" description="Video production, digital marketing, brand development, and AI solutions from Gravity Mega Media." path="/services" image="/social-image.svg" />
       {/* Hero */}
       <section className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">

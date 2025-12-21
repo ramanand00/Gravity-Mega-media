@@ -4,6 +4,7 @@ import { FaBullseye, FaEye, FaHandsHelping, FaAward } from 'react-icons/fa';
 import DipakImg from '../assets/team/dipak.jpg';
 import RamanandImg from '../assets/team/ramanand.jpg';
 import BipanaImg from '../assets/team/bipana.jpeg';
+import SEO from '../components/SEO';
 
 const About = () => {
   const values = [
@@ -50,6 +51,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="About - Gravity Mega Media" description="About Gravity Mega Media: mission, team, and services." path="/about" image="/social-image.svg" />
       {/* Hero */}
       <section className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">

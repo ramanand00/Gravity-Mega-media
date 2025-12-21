@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaPlay, FaArrowRight, FaYoutube, FaUsers, FaTrophy, FaLightbulb } from 'react-icons/fa';
 import YouTubeChannelEmbed from '../components/YouTubeChannelEmbed';
+import SEO from '../components/SEO';
 
 const Home = () => {
   const services = [
@@ -32,6 +33,7 @@ const Home = () => {
 
   return (
     <div>
+      <SEO title="Home - Gravity Mega Media" description="Creating digital experiences — video production, marketing, and AI solutions." path="/" image="/social-image.svg" />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white">
         <div className="container mx-auto px-4 py-24">

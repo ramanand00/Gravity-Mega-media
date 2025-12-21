@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import { FaShieldAlt, FaUserLock, FaDatabase, FaCookie, FaEnvelope } from 'react-icons/fa';
 
 const PrivacyPolicy = () => {
@@ -79,6 +80,7 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Privacy Policy - Gravity Mega Media" description="Your privacy is important to us — read our policy." path="/privacy-policy" image="/social-image.svg" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
