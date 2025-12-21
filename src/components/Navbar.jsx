@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import Logo from '../assets/logo.jpg'; // Create a separate Logo component
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
@@ -26,9 +26,8 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-xl flex items-center justify-center">
-              <span className="text-white text-2xl font-bold">G</span>
-            </div>
+            <img src={Logo} alt="Logo" className="h-12 w-auto" />
+
             <div>
               <h1 className="text-2xl font-bold text-white">Gravity Mega Media</h1>
               <p className="text-sm text-gray-200">Creating Digital Experiences</p>
@@ -38,51 +37,25 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              item.children ? (
-                <div key={item.label} className="relative">
-                  <button
-                    onClick={() => setDropdownOpen(!dropdownOpen)}
-                    className="flex items-center text-white hover:text-gray-200 font-medium"
-                  >
-                    {item.label}
-                    <FaChevronDown className="ml-1" />
-                  </button>
-                  {dropdownOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border py-2">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          to={child.path}
-                          className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`font-medium transition-colors ${
-                    isActive(item.path)
-                      ? 'text-yellow-300'
-                      : 'text-white hover:text-gray-200'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              )
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`font-medium transition-colors ${
+                  isActive(item.path)
+                    ? 'text-yellow-300'
+                    : 'text-white hover:text-gray-200'
+                }`}
+              >
+                {item.label}
+              </Link>
             ))}
-
-           
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden text-white"
+            aria-label="Toggle menu"
           >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -93,38 +66,18 @@ const Navbar = () => {
           <div className="lg:hidden border-t border-yellow-300 py-4">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                item.children ? (
-                  <div key={item.label}>
-                    <div className="font-medium text-white mb-2">
-                      {item.label}
-                    </div>
-                    <div className="ml-4 space-y-2">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          to={child.path}
-                          className="block py-2 text-gray-200 hover:text-yellow-300"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    className={`py-2 ${
-                      isActive(item.path)
-                        ? 'text-yellow-300 font-medium'
-                        : 'text-white hover:text-gray-200'
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                )
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`py-2 ${
+                    isActive(item.path)
+                      ? 'text-yellow-300 font-medium'
+                      : 'text-white hover:text-gray-200'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
               ))}
 
               <div className="pt-4 border-t border-yellow-300">

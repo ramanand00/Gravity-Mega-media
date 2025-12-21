@@ -125,6 +125,13 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Example Ad (replace data-ad-slot with your slot id) */}
+        <div className="mt-8 flex justify-center">
+          {/* Place an ad unit here if desired */}
+          {/* <AdSense slot="1234567890" style={{ display: 'block', width: '100%', height: '90px' }} /> */}
+          {/* To enable, import AdSense and uncomment the line above and replace slot id */}
+        </div>
+
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
   <p>
