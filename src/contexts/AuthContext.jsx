@@ -1,69 +1,32 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
-import axios from 'axios';
+// contexts/AuthContext.js
+import { createContext, useContext, useState } from 'react';
 
-const AuthContext = createContext({});
+const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
-  const [admin, setAdmin] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-      fetchAdmin();
-    } else {
-      setLoading(false);
-    }
-  }, []);
-
-  const fetchAdmin = async () => {
-    try {
-      const response = await axios.get('/api/auth/me');
-      setAdmin(response.data);
-    } catch (error) {
-      localStorage.removeItem('token');
-      delete axios.defaults.headers.common['Authorization'];
-    } finally {
-      setLoading(false);
-    }
-  };
+  const [currentUser, setCurrentUser] = useState(null);
 
   const login = async (email, password) => {
-    try {
-      const response = await axios.post('/api/auth/login', { email, password });
-      const { token, admin } = response.data;
-      
-      localStorage.setItem('token', token);
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-      setAdmin(admin);
-      
+    // Simulate network delay
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    // Mock admin credentials
+    if (email === 'admin@gravitymedia.com' && password === 'password123') {
+      setCurrentUser({ email });
       return { success: true };
-    } catch (error) {
-      return { 
-        success: false, 
-        message: error.response?.data?.message || 'Login failed' 
-      };
+    } else {
+      return { success: false, message: 'Invalid email or password' };
     }
   };
 
   const logout = () => {
-    localStorage.removeItem('token');
-    delete axios.defaults.headers.common['Authorization'];
-    setAdmin(null);
-  };
-
-  const value = {
-    admin,
-    login,
-    logout,
-    loading
+    setCurrentUser(null);
   };
 
   return (
-    <AuthContext.Provider value={value}>
+    <AuthContext.Provider value={{ currentUser, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

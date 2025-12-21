@@ -27,7 +27,7 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-gradient-to-r from-primary-600 to-secondary-600 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -36,8 +36,8 @@ const Navbar = () => {
               <span className="text-white text-2xl font-bold">G</span>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Gravity Mega Media</h1>
-              <p className="text-sm text-gray-600">Creating Digital Experiences</p>
+              <h1 className="text-2xl font-bold text-white">Gravity Mega Media</h1>
+              <p className="text-sm text-gray-200">Creating Digital Experiences</p>
             </div>
           </Link>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
                 <div key={item.label} className="relative">
                   <button
                     onClick={() => setDropdownOpen(!dropdownOpen)}
-                    className="flex items-center text-gray-700 hover:text-primary-600 font-medium"
+                    className="flex items-center text-white hover:text-gray-200 font-medium"
                   >
                     {item.label}
                     <FaChevronDown className="ml-1" />
@@ -73,19 +73,18 @@ const Navbar = () => {
                   to={item.path}
                   className={`font-medium transition-colors ${
                     isActive(item.path)
-                      ? 'text-primary-600'
-                      : 'text-gray-700 hover:text-primary-600'
+                      ? 'text-yellow-300'
+                      : 'text-white hover:text-gray-200'
                   }`}
                 >
                   {item.label}
                 </Link>
               )
             ))}
-            
-            
+
             <Link
               to="/admin"
-              className="bg-primary-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+              className="bg-yellow-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition-colors"
             >
               Admin
             </Link>
@@ -94,7 +93,7 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-gray-700"
+            className="lg:hidden text-white"
           >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -102,12 +101,12 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden border-t py-4">
+          <div className="lg:hidden border-t border-yellow-300 py-4">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 item.children ? (
                   <div key={item.label}>
-                    <div className="font-medium text-gray-700 mb-2">
+                    <div className="font-medium text-white mb-2">
                       {item.label}
                     </div>
                     <div className="ml-4 space-y-2">
@@ -115,7 +114,7 @@ const Navbar = () => {
                         <Link
                           key={child.label}
                           to={child.path}
-                          className="block py-2 text-gray-600 hover:text-primary-600"
+                          className="block py-2 text-gray-200 hover:text-yellow-300"
                           onClick={() => setIsOpen(false)}
                         >
                           {child.label}
@@ -129,8 +128,8 @@ const Navbar = () => {
                     to={item.path}
                     className={`py-2 ${
                       isActive(item.path)
-                        ? 'text-primary-600 font-medium'
-                        : 'text-gray-700 hover:text-primary-600'
+                        ? 'text-yellow-300 font-medium'
+                        : 'text-white hover:text-gray-200'
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
@@ -138,13 +137,11 @@ const Navbar = () => {
                   </Link>
                 )
               ))}
-              
-              <div className="pt-4 border-t">
-                
-                
+
+              <div className="pt-4 border-t border-yellow-300">
                 <Link
                   to="/admin"
-                  className="block bg-primary-600 text-white px-4 py-2 rounded-lg font-semibold text-center mt-4"
+                  className="block bg-yellow-500 text-white px-4 py-2 rounded-lg font-semibold text-center mt-4 hover:bg-yellow-600"
                   onClick={() => setIsOpen(false)}
                 >
                   Admin Login

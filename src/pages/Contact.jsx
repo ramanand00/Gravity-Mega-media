@@ -100,9 +100,9 @@ const Contact = () => {
                       <item.icon size={20} />
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
+                      <h3 className="font-bold text-white mb-1">{item.title}</h3>
                       {item.details.map((detail, idx) => (
-                        <p key={idx} className="text-gray-600">{detail}</p>
+                        <p key={idx} className="text-white">{detail}</p>
                       ))}
                     </div>
                   </div>

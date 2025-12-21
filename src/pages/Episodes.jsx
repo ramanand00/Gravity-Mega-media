@@ -1,48 +1,24 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import EpisodeCard from '../components/EpisodeCard';
-import episodeService from '../services/episodeService';
-import axios from 'axios';
+import videos from '../data/videos';
 
 const Episodes = () => {
-  const [episodes, setEpisodes] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [error, setError] = useState('');
-
-  useEffect(() => {
-    fetchEpisodes();
-  }, [category]);
-
-  const fetchEpisodes = async () => {
-    try {
-      setLoading(true);
-      setError('');
-      
-      // Use service instead of direct axios call
-      const params = category === 'all' ? {} : { category };
-      const response = await episodeService.getAllEpisodes(params);
-      
-      setEpisodes(response.episodes || []);
-    } catch (error) {
-      console.error('Error fetching episodes:', error);
-      setError('Failed to load episodes. Please try again later.');
-      setEpisodes([]);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const filteredEpisodes = episodes.filter(episode =>
-    episode.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    episode.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   const categories = [
     { id: 'all', name: 'All Episodes' },
     { id: 'The GRAVITY SHOW', name: 'The GRAVITY SHOW' },
     { id: 'AI Segment', name: 'AI Segment' }
   ];
+
+  const filteredEpisodes = videos.filter((episode) => {
+    const matchesCategory = category === 'all' || episode.category === category;
+    const matchesSearch =
+      episode.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      episode.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -88,33 +64,22 @@ const Episodes = () => {
           </div>
         </div>
 
-        {/* Loading State */}
-        {loading ? (
-          <div className="flex justify-center py-20">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div>
+        {/* Episodes Grid */}
+        {filteredEpisodes.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredEpisodes.map((episode) => (
+              <EpisodeCard key={episode.id} episode={episode} />
+            ))}
           </div>
         ) : (
-          <>
-            {/* Episodes Grid */}
-            {filteredEpisodes.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredEpisodes.map((episode) => (
-                  <EpisodeCard key={episode._id} episode={episode} />
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-20">
-                <h3 className="text-2xl font-bold text-gray-700 mb-4">
-                  No episodes found
-                </h3>
-                <p className="text-gray-500">
-                  {searchTerm 
-                    ? `No episodes match "${searchTerm}"`
-                    : 'No episodes available in this category'}
-                </p>
-              </div>
-            )}
-          </>
+          <div className="text-center py-20">
+            <h3 className="text-2xl font-bold text-gray-700 mb-4">No episodes found</h3>
+            <p className="text-gray-500">
+              {searchTerm
+                ? `No episodes match "${searchTerm}"`
+                : 'No episodes available in this category'}
+            </p>
+          </div>
         )}
       </div>
     </div>
