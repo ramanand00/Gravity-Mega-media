@@ -1,31 +1,139 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- ===================== -->
+    <!-- BASIC & CORE SEO -->
+    <!-- ===================== -->
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Gravity Mega Media — Innovative video production, digital marketing, and AI-powered media solutions." />
-    <meta name="keywords" content="Gravity Mega Media, video production, digital marketing, brand development, AI solutions" />
+
+    <title>Gravity Mega Media | Video Production & Digital Marketing Agency</title>
+
+    <meta
+      name="description"
+      content="Gravity Mega Media is a leading creative agency offering video production, digital marketing, branding, and AI-powered media solutions to scale modern businesses globally."
+    />
+
+    <meta
+      name="keywords"
+      content="Gravity Mega Media, video production agency, digital marketing agency, branding company, AI media solutions, creative agency"
+    />
+
+    <meta name="author" content="Gravity Mega Media" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    <!-- ===================== -->
+    <!-- GEO & LANGUAGE SIGNALS -->
+    <!-- ===================== -->
+    <meta name="language" content="English" />
+    <meta name="distribution" content="global" />
+    <meta name="geo.region" content="NP" />
+    <meta name="geo.placename" content="Nepal" />
+
+    <!-- ===================== -->
+    <!-- THEME & BRANDING -->
+    <!-- ===================== -->
     <meta name="theme-color" content="#111827" />
-    <link rel="icon" href="/vite.svg" />
+    <meta name="msapplication-TileColor" content="#111827" />
+
+    <!-- ===================== -->
+    <!-- CANONICAL -->
+    <!-- ===================== -->
+    <link rel="canonical" href="https://gravitymegamedia.com/" />
+
+    <!-- ===================== -->
+    <!-- ICONS -->
+    <!-- ===================== -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- ===================== -->
+    <!-- PERFORMANCE BOOST -->
+    <!-- ===================== -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- ===================== -->
+    <!-- MANIFEST (PWA) -->
+    <!-- ===================== -->
     <link rel="manifest" href="/manifest.json" />
-    <link rel="canonical" href="https://example.com/" />
+
+    <!-- ===================== -->
+    <!-- OPEN GRAPH (SOCIAL SEO) -->
+    <!-- ===================== -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Gravity Mega Media" />
-    <meta property="og:description" content="Gravity Mega Media — Innovative video production and digital transformation." />
-    <meta property="og:image" content="/social-image.svg" />
-    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:site_name" content="Gravity Mega Media" />
+    <meta property="og:title" content="Gravity Mega Media | Creative Digital Agency" />
+    <meta
+      property="og:description"
+      content="High-impact video production, digital marketing, branding, and AI-driven media solutions."
+    />
+    <meta property="og:image" content="https://gravitymegamedia.com/social-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://gravitymegamedia.com/" />
+
+    <!-- ===================== -->
+    <!-- TWITTER SEO -->
+    <!-- ===================== -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@gravitymegamedia" />
     <meta name="twitter:title" content="Gravity Mega Media" />
-    <meta name="twitter:description" content="Gravity Mega Media — Innovative video production and digital transformation." />
-    <meta name="twitter:image" content="/social-image.svg" />
+    <meta
+      name="twitter:description"
+      content="Creative video, digital marketing, and AI-powered media solutions."
+    />
+    <meta name="twitter:image" content="https://gravitymegamedia.com/social-image.jpg" />
 
-    <!-- Google AdSense -->
-    <meta name="google-adsense-account" content="ca-pub-2037031298655823">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2037031298655823"
-     crossorigin="anonymous"></script>
+    <!-- ===================== -->
+    <!-- GOOGLE ADSENSE -->
+    <!-- ===================== -->
+    <meta name="google-adsense-account" content="ca-pub-2037031298655823" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2037031298655823"
+      crossorigin="anonymous"
+    ></script>
 
-    <title>Gravity Mega Media</title>
+    <!-- ===================== -->
+    <!-- STRUCTURED DATA (JSON-LD) -->
+    <!-- ===================== -->
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Gravity Mega Media",
+        "url": "https://gravitymegamedia.com",
+        "logo": "https://gravitymegamedia.com/logo.png",
+        "description": "Creative agency specializing in video production, digital marketing, branding, and AI-powered media solutions.",
+        "sameAs": [
+          "https://www.facebook.com/",
+          "https://www.instagram.com/",
+          "https://www.linkedin.com/"
+        ]
+      }
+    </script>
+
+    <!-- Website + Search Box Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://gravitymegamedia.com/",
+        "name": "Gravity Mega Media",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://gravitymegamedia.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
