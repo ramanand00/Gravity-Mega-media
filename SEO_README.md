@@ -18,14 +18,14 @@ Next steps and notes:
 
 2. Add more per-page metadata:
    - The `SEO` component is reusable—import it into other pages and pass `title`, `description`, `image`, and `path`.
-   - I added it to `Home`, `Episodes`, and `News` as examples. Add to other pages (About, Team, Gallery, Contact, Services, Privacy/Terms) for best coverage.
+   - I added it to `Home`, `Videos`, and `News` as examples. Add to other pages (About, Team, Gallery, Contact, Services, Privacy/Terms) for best coverage.
 
 3. Content & SEO strategy:
    - Technical SEO (meta tags, sitemap, robots) is only part of ranking. Improve page content, structured data, backlinks, site speed, and mobile UX.
    - Use Google Search Console and submit your sitemap after deployment.
 
 4. Sitemap dynamic content:
-   - The generator attempts to fetch episodes from your API; make sure the backend is reachable or update `API_URL` env var.
+   - The generator attempts to fetch Videos from your API; make sure the backend is reachable or update `API_URL` env var.
 
 5. Limitations:
    - No tool can guarantee "top" ranking: ranking depends on competition, content quality, backlinks, and ongoing SEO work.

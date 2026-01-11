@@ -44,7 +44,7 @@ const Home = () => {
             Gravity Mega Media – Innovative content & digital transformation.
           </p>
           <Link
-            to="/episodes"
+            to="/videos"
             className="bg-primary-600 px-8 py-4 rounded-lg font-semibold inline-flex items-center"
           >
             <FaPlay className="mr-2" />

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import Episodes from './pages/Episodes';
+import Videos from './pages/Videos';
 import About from './pages/About';
 import Services from './pages/Services';
 import Gallery from './pages/Gallery';
@@ -26,7 +26,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="services" element={<Services />} />
-            <Route path="episodes" element={<Episodes />} />
+            <Route path="Videos" element={<Videos />} />
             <Route path="gallery" element={<Gallery />} />
             <Route path="news" element={<News />} />
             <Route path="team" element={<Team />} />
