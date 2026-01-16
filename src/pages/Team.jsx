@@ -59,7 +59,7 @@ const Team = () => {
       },
       {
         name: 'Sirish Shrestha',
-        role: 'AI Specialist',
+        role: 'Director',
         image: sirish,
         bio: 'Leading our AI and machine learning initiatives',
         social: { linkedin: '#', twitter: '#', instagram: '#' }
