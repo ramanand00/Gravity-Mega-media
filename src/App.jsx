@@ -15,6 +15,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
+import NewsDetails from './pages/NewsDetails';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="Videos" element={<Videos />} />
             <Route path="gallery" element={<Gallery />} />
             <Route path="news" element={<News />} />
+            <Route path="news/:id" element={<NewsDetails />} />
             <Route path="team" element={<Team />} />
             <Route path="contact" element={<Contact />} />
             <Route path="terms" element={<TermsConditions />} />
